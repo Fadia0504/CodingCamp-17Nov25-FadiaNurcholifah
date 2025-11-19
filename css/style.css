@@ -60,10 +60,13 @@ nav ul li a {
     display: flex;
     justify-content: space-between;
     gap: 40px;
+    flex-direction: row;
+    align-items: flex-start;
+    width: 100%;
 }
 
 form{
-    width: 45%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 10px;
@@ -85,5 +88,22 @@ button{
 .result-box{
     padding: 20px;
     border: 1px solid #ccc;
-    width: 45%;
+    width: 50%;
+    background: #fafafa;
+    min-height: 250px;
+}
+
+@media (max-width: 786px){
+    .form-container{
+        flex-direction: column;
+    }
+
+    form, .result-box{
+        width: 100%;
+    }
+
+    .hq-container{
+        flex-direction: column;
+        align-items: center;
+    }
 }
