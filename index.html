@@ -38,5 +38,32 @@
             </div>
         </div>
     </section>
+
+    <section class="message-action" id="message">
+        <h2>Message Us</h2>
+        <div class="form-container">
+            <form id="messageForm" onsubmit="submitForm(event)">
+                <label>Nama</label>
+                <input type="text" placeholder="Nama" id="formName">
+                <label>Tanggal Lahir</label>
+                <input type="date" id="formBirth">
+                <label>Jenis Kelamin</label>
+                <div class="gender-box">
+                    <label><input type="radio" name="gender" value="Laki-Laki">Laki-Laki</label>
+                </div>
+                <div class="gender-box">
+                    <label><input type="radio" name="gender" value="Perempuan">Perempuan</label>
+                </div>
+                <label>Pesan</label>
+                <textarea id="formMessage" placeholder="Pesan"></textarea>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div class="result-box">
+            <h3 >Result</h3>
+            <p id="currentTime"></p>
+            <div id="result"></div>
+        </div>
+    </section>
 </body>
 </html>
