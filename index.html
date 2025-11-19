@@ -54,64 +54,52 @@
         </section>
 
         <!-- Message Section -->
-        <section class="message-section" id="message">
+        <section class="message-section" id="messageSection">
             <div class="message-container">
                 <h2>Message Us</h2>
                 <div class="message-content">
                     <form id="messageForm">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" placeholder="Your Name">
-                            <span class="error" id="nameError">Name is required</span>
+                            <label for="name">Nama</label>
+                            <input type="text" id="name" name="name" placeholder="Nama">
+                            <span class="error" id="nameError">Nama harus diisi</span>
                         </div>
 
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" placeholder="your@email.com">
-                            <span class="error" id="emailError">Valid email is required</span>
+                            <label for="birthdate">Tanggal Lahir</label>
+                            <input type="date" id="birthdate" name="birthdate">
+                            <span class="error" id="birthdateError">Tanggal lahir harus diisi</span>
                         </div>
 
                         <div class="form-group">
-                            <label for="phone">Phone Number</label>
-                            <input type="tel" id="phone" name="phone" placeholder="08xxxxxxxxxx">
-                            <span class="error" id="phoneError">Valid phone number is required (10-13 digits)</span>
+                            <label for="gender">Jenis Kelamin</label>
+                            <select id="gender" name="gender">
+                                <option value="">Pilih Jenis Kelamin</option>
+                                <option value="Laki-Laki">Laki-Laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                            <span class="error" id="genderError">Jenis kelamin harus dipilih</span>
                         </div>
 
                         <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" placeholder="Your message here..."></textarea>
-                            <span class="error" id="messageError">Message is required</span>
+                            <label for="message">Pesan</label>
+                            <textarea id="message" name="message" placeholder="Pesan anda..."></textarea>
+                            <span class="error" id="messageError">Pesan harus diisi</span>
                         </div>
 
                         <button type="submit" class="submit-btn">Submit</button>
                     </form>
 
-                    <div class="info-box">
-                        <h3>Current Information</h3>
-                        <div class="info-item">
-                            <strong>Current time:</strong>
-                            <span id="currentTime"></span>
-                        </div>
-                        <div class="info-item">
-                            <strong>Name:</strong>
-                            <span id="displayName">Harji Nurani</span>
-                        </div>
-                        <div class="info-item">
-                            <strong>Tanggal Lahir:</strong>
-                            <span id="displayBirth">01/17/1995</span>
-                        </div>
-                        <div class="info-item">
-                            <strong>Jenis Kelamin:</strong>
-                            <span id="displayGender">Laki-Laki</span>
-                        </div>
-                        <div class="info-item">
-                            <strong>Alamat Lengkap:</strong>
-                            <span id="displayAddress">Jalan Monjali, RT.1 RW.2, Sendangadi</span>
-                        </div>
+                    <!-- RESULT -->
+                    <div class="result-box">
+                        <h3>Result</h3>
+                        <p id="currentTime"></p>
+                        <div id="result"></div>
                     </div>
                 </div>
             </div>
         </section>
     </div>
+<script src="js/script.js"></script>
 </body>
 </html>
