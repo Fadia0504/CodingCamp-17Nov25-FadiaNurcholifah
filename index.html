@@ -3,69 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
+    <title>My Website - Company Profile</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <nav>
-        <h2 class="logo">My Website</h2>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="profile.html">Our Profile</a></li>
-            <li><a href="#portofolio">Portofolio</a></li>
-            <li><a href="#message">Message Us</a></li>
-        </ul>
-    </nav>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">🏢</div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#" onclick="showHome()">Home</a></li>
+                <li><a href="#" onclick="showProfile()">Our Profile</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#message">Message Us</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
 
-    <section class="banner">
-        <h1>Hi <span id="welcomeName">Name</span>, Welcome to Website</h1>
-        <p>Ini adalah website latihan pertama</p>
-    </section>
-    <section class="hq">
-        <h2>Our HeadQuarter</h2>
-        <div class="hq-container">
-            <div class="hq-item">
-                <div class="circle"></div>
-                <p>Jakarta</p>
-            </div>
-            <div class="hq-item">
-                <div class="circle"></div>
-                <p>Bandung</p>
-            </div>
-            <div class="hq-item">
-                <div class="circle"></div>
-                <p>Surabaya</p>
-            </div>
-        </div>
-    </section>
+    <!-- Home Page -->
+    <div id="homePage">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 id="welcomeText">Hi, Welcome To Website</h1>
+            <p>Ini adalah website untuk partners</p>
+            <p id="currentDate"></p>
+        </section>
 
-    <section class="message-action" id="message">
-        <h2>Message Us</h2>
-        <div class="form-container">
-            <form id="messageForm" onsubmit="submitForm(event)">
-                <label>Nama</label>
-                <input type="text" placeholder="Nama" id="formName">
-                <label>Tanggal Lahir</label>
-                <input type="date" id="formBirth">
-                <label>Jenis Kelamin</label>
-                <div class="gender-box">
-                    <label><input type="radio" name="gender" value="Laki-Laki">Laki-Laki</label>
+        <!-- Headquarter Section -->
+        <section class="headquarter">
+            <h2>Our Headquarter</h2>
+            <div class="hq-grid">
+                <div class="hq-card">
+                    <div class="hq-circle">🏢</div>
+                    <h3>Jakarta</h3>
                 </div>
-                <div class="gender-box">
-                    <label><input type="radio" name="gender" value="Perempuan">Perempuan</label>
+                <div class="hq-card">
+                    <div class="hq-circle">🏢</div>
+                    <h3>Bandung</h3>
                 </div>
-                <label>Pesan</label>
-                <textarea id="formMessage" placeholder="Pesan"></textarea>
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-        <div class="result-box">
-            <h3 >Result</h3>
-            <p id="currentTime"></p>
-            <div id="result"></div>
-        </div>
-    </section>
+                <div class="hq-card">
+                    <div class="hq-circle">🏢</div>
+                    <h3>Surabaya</h3>
+                </div>
+            </div>
+        </section>
 
-    <script src="js/script.js"></script>
+        <!-- Message Section -->
+        <section class="message-section" id="message">
+            <div class="message-container">
+                <h2>Message Us</h2>
+                <div class="message-content">
+                    <form id="messageForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" placeholder="Your Name">
+                            <span class="error" id="nameError">Name is required</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="your@email.com">
+                            <span class="error" id="emailError">Valid email is required</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" placeholder="08xxxxxxxxxx">
+                            <span class="error" id="phoneError">Valid phone number is required (10-13 digits)</span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Your message here..."></textarea>
+                            <span class="error" id="messageError">Message is required</span>
+                        </div>
+
+                        <button type="submit" class="submit-btn">Submit</button>
+                    </form>
+
+                    <div class="info-box">
+                        <h3>Current Information</h3>
+                        <div class="info-item">
+                            <strong>Current time:</strong>
+                            <span id="currentTime"></span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Name:</strong>
+                            <span id="displayName">Harji Nurani</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Tanggal Lahir:</strong>
+                            <span id="displayBirth">01/17/1995</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Jenis Kelamin:</strong>
+                            <span id="displayGender">Laki-Laki</span>
+                        </div>
+                        <div class="info-item">
+                            <strong>Alamat Lengkap:</strong>
+                            <span id="displayAddress">Jalan Monjali, RT.1 RW.2, Sendangadi</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 </body>
 </html>
