@@ -26,3 +26,28 @@ nav ul li a {
 .active {
     color: blue;
 }
+
+.banner {
+    height: 400px;
+    background: #ddd;
+    text-align: left;
+    padding: 60px;
+}
+
+.hq {
+    padding: 40px;
+}
+
+.hq-container {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    text-align: center;
+}
+
+.circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid black;
+}
